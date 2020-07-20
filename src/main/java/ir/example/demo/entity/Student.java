@@ -36,10 +36,6 @@ public class Student {
     @JoinTable(name = "student_course", inverseJoinColumns = @JoinColumn(name = "course_id"), joinColumns = @JoinColumn(name = "student_id"))
     private List<Course> courses = new ArrayList<>();
 
-//    @JoinTable(name = "stock_category", catalog = "mkyongdb", joinColumns = {
-//            @JoinColumn(name = "STOCK_ID", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "CATEGORY_ID",
-//                    nullable = false, updatable = false) })
-//    Set<Category> getCategories;
 
     public String toString() {
         return getName() + " - " + getMasters().get(0).getName() + " - " + getCourses().get(0).getName() + " - " + getAge() + " - " + getId();
