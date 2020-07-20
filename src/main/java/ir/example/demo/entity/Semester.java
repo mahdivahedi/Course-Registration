@@ -1,4 +1,3 @@
-/*
 package ir.example.demo.entity;
 
 
@@ -20,11 +19,10 @@ public class Semester {
     @Column(name = "semester_id")
     private int semesterId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "course_id")
+    @ManyToOne
+    @JoinColumn(name = "course_id", insertable = false, updatable = false)
     private Course course;
 
     private String time;
 
 }
-*/

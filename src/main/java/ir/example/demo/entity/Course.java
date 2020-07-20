@@ -32,8 +32,11 @@ public class Course {
     private List<Student> students = new ArrayList<>();
 
 
-    /*@OneToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "semester")
-    private List<Semester> semesters;*/
+    @OneToMany(mappedBy = "course")
+    private List<Semester> semesters;
+
+    public String toString() {
+        return "id is: " + id + "\n name of course is: " + name + "\n in one semester like: " + semesters.get(0).getTime() + "";
+    }
 
 }

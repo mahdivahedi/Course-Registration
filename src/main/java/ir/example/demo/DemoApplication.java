@@ -22,7 +22,7 @@ public class DemoApplication {
 
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Master.class).addAnnotatedClass(Course.class)
-                .addAnnotatedClass(Student.class);
+                .addAnnotatedClass(Student.class).addAnnotatedClass(Semester.class);
 
         // create a session
         SessionFactory sessionFactory = configuration.buildSessionFactory();
